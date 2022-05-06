@@ -5,5 +5,5 @@ services:
     ports:
       - 8777:5000
     volumes:
-      - ./scores/:/home/mruser/scores/
+      - ./scores/:/home/paul/scores/
       
