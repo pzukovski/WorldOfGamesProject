@@ -6,7 +6,7 @@ USER paul
 ENV PATH="/home/paul/.local/bin:${PATH}"
 
 RUN pip install --upgrade pip
-WORKDIR /home/mruser
+WORKDIR /home/paul
 COPY ./flask/ .
 RUN pip install -r requirements.txt
 
