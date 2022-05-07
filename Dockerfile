@@ -1,12 +1,12 @@
 FROM python:alpine
 
-RUN adduser -D mruser
+RUN adduser -D paul
 
 USER mruser
-ENV PATH="/home/mruser/.local/bin:${PATH}"
+ENV PATH="/home/paul/.local/bin:${PATH}"
 
 RUN pip install --upgrade pip
-WORKDIR /home/mruser
+WORKDIR /home/paul
 COPY ./flask/ .
 RUN pip install -r requirements.txt
 
