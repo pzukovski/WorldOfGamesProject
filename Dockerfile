@@ -2,7 +2,7 @@ FROM python:alpine
 
 RUN adduser -D paul
 
-USER mruser
+USER paul
 ENV PATH="/home/paul/.local/bin:${PATH}"
 
 RUN pip install --upgrade pip
