@@ -43,10 +43,9 @@ pipeline {
         stage('Finalize') {
             steps {
                 sh '''docker-compose down
-                docker login -u twotrickspony -p 785694123
-                # pipeline name was flask-test-wog
-                docker tag flask-test-wog_web twotrickspony/wog-web-test:latest
-                docker image push twotrickspony/wog-web-test:latest
+                docker login -u polik1999 -p 123456789
+                docker tag world_of_games_web polik1999/devops:latest
+                docker image push polik1999/devops:latest
                 docker logout'''
             }
         }
