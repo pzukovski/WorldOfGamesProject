@@ -17,12 +17,6 @@ if __name__ == '__main__':
             add_scores(level_of_diff)
         replay = input('Would you like to play again? y/n ')
 
-# print(chosen_parameters)
-# print(type(chosen_parameters))
-# print(level_of_diff)
-# print(type(level_of_diff))
-# print(did_i_win)
-# print(type(did_i_win))
 
 clear_terminal()
 print('\n\nThank you for playing WOG.')
