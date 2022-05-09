@@ -4,12 +4,7 @@ from games import MemoryGame, GuessGame, CurrencyRouletteGame
 
 
 def welcome(name):
-    """
-    this func prints a welcome greeting using the player's name entered in previous stage.
-    it also initializes the Scores.txt file
-    :param name: player's name as string
-    :return: None
-    """
+    
     clear_terminal()
     reset_scores_file()
     greeting = f"\nHello {name}, and welcome to the World of Games (WoG). Here you can find many cool games to play."
@@ -18,11 +13,7 @@ def welcome(name):
 
 
 def load_game():
-    """
-    this func gets two inputs from the user, the first for a game (1-3) and the second is for difficulty (1-5)
-    it also checks that the input is legal (numbers only) and in range (1-3 and 1-5)
-    :return: list where [chosen game, difficulty]
-    """
+    
 
     try:
         game_selection = int(input("""\n\nPlease choose a game to play (1, 2 or 3):
@@ -55,10 +46,7 @@ def load_game():
 
 
 def play_da_game(game_selection):
-    """
-    this func runs the game and difficulty selection function and then sends the data to the corresponding game
-    :return: None
-    """
+    
     # game_selection = load_game()
     if game_selection[0] == 1:
         state = MemoryGame.play_memory(game_selection[1])
