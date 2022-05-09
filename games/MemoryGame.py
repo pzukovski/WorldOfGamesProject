@@ -5,11 +5,7 @@ from utils.Utils import clear_terminal
 
 
 def generate_sequence(difficulty):
-    """
-    this func generates a list of random numbers between 1-101. List length generated from difficulty argument
-    :param difficulty: integer chosen by the player as their difficulty level
-    :return: a list of numbers between 1-101 (formatted as strings)
-    """
+    
     guess_me = random.sample(range(1, 101), difficulty)
     clear_terminal()
     print("""Welcome to the MemoryGame. Soon you'll be shown a series of numbers for short period.
@@ -28,12 +24,7 @@ Good luck!""")
 
 
 def get_list_from_user(difficulty):
-    """
-    this func asks for the player input to create a list of integers. list's length taken from 'difficulty' argument
-    it also verifies all inputs are indeed numbers and not letters of special characters
-    :param difficulty: integer chosen by the player as their difficulty level
-    :return: a list of numbers between 1-101 (formatted as strings)
-    """
+    
     user_guess = []
     p = inflect.engine()  # changes '1' to First, '2' to Second etc.
 
@@ -54,12 +45,7 @@ def get_list_from_user(difficulty):
 
 
 def is_list_equal(user_guess, guess_me):
-    """
-    this func compares the secret generated list with the user guess
-    :param user_guess: list with integers
-    :param guess_me: list with integers
-    :return: True or False
-    """
+    
     is_equal = (user_guess == guess_me)    # as both lists contains only integers we can compare them easily.
     if is_equal:
         print('Great. You won! \n\n')
@@ -70,12 +56,7 @@ def is_list_equal(user_guess, guess_me):
 
 
 def play_memory(difficulty):
-    """
-    this func ties the game together. it runs the func that generates a secret list, then it runs the func asking
-    for the player's input, then it compares between the two
-    :param difficulty: integer chosen by the player
-    :return: True (win) or False (lose)
-    """
+    
     secret_list = generate_sequence(difficulty)
     user_list = get_list_from_user(difficulty)
     so_is_it = is_list_equal(secret_list, user_list)
